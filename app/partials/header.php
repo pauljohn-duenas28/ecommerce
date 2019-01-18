@@ -1,6 +1,6 @@
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">
-			<i class="far fa-hand-peace"></i> Qrner Store
+			<i class="far fa-hand-peace"></i> Rita Ritz Footwear
 		</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
@@ -21,7 +21,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="./cart.php"> Cart <span class="badge bg-light text-dark" id="cart-count">
+							<a class="nav-link" href="./cart.php"> Cart <span class="badge bg-danger text-light" id="cart-count">
 								<?php
 									if (isset($_SESSION['cart'])) {
 										echo array_sum($_SESSION['cart']);
