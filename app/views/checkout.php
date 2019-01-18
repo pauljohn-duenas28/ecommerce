@@ -23,7 +23,22 @@
 		 			</div>
 	 			</div> <!-- end col -->
 	 		</div> <!-- end row -->
-			
+			<div class="col-sm-4">
+				<h4>Payment Methods</h4>
+				<select name="payment_mode" id="payment_mode" class="form-control">
+					<?php
+						$payment_mode_query = "SELECT * FROM payments_modes";
+						$payment_modes = mysqli_query($conn, $payment_mode_query);
+
+						foreach ($payment_modes as $payment_mode) {
+							extract($payment_mode);
+							echo  "<option value='$id'>$name</option>";
+						}
+
+					?>
+
+				</select>
+			</div>
 			<h4>Order Summary</h4>
 			<div class="row">
 				<div class="col-sm-6">

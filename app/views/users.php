@@ -1,7 +1,7 @@
 <?php require_once '../partials/template.php'; ?>
 
 <?php function get_page_content(){
-	if((isset($_SESSION['user'])) && $_SESSION['user']['role_id'] == 1) {
+	if(isset($_SESSION['user']) && $_SESSION['user']['roles_id'] == 1) {
 	global $conn;
 	?>
 	
