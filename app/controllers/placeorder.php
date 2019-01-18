@@ -97,7 +97,7 @@ function generate_new_transaction_number() {
 
 	$staff_email = 'paulduenas925@gmail.com';
 	$customer_email = $_SESSION['user']['email'];          //
-	$subject = 'Qstore Phils - Order Confirmation';
+	$subject = 'Rita Ritz Footwear - Order Confirmation';
 	$body = '<div style="text-transform:uppercase;"><h3>Reference No.: '.$transaction_number.'</h3></div>'."<div>Ship to $address</div>";
 	try {
 	    //Server settings
@@ -111,7 +111,7 @@ function generate_new_transaction_number() {
 	    $mail->Port = 587;                                    // TCP port to connect to
 
 	    //Recipients
-	    $mail->setFrom($staff_email, 'Qstore');
+	    $mail->setFrom($staff_email, 'Ritz Footwear');
 	    $mail->addAddress($customer_email);  // Name is optional
 
 	    //Content
