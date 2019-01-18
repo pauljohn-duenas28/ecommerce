@@ -162,7 +162,7 @@ function generate_new_transaction_number() {
     $transaction ->setAmount($amount)
                 ->setItemList($item_list)
                 ->setDescription('Payment for Qstore Purchase')
-                ->setInvoiceNumber(uniqid("Qstore_"));
+                ->setInvoiceNumber(uniqid("RRF"));
 
     $redirectUrls = new RedirectUrls();
     $redirectUrls
