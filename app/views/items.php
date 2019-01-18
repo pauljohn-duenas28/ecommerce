@@ -1,6 +1,7 @@
 <?php require_once '../partials/template.php'; ?>
 
 <?php function get_page_content() { 
+	if(isset($_SESSION['user']) && $_SESSION['user']['roles_id']==1){
 	global $conn;
 	?>
 
@@ -31,8 +32,8 @@
 					</div> <!-- end card body -->
 
 					<div class="card-footer">
-						<a href="./edit_item.php?id=item id" class="btn btn-primary"> Edit Item</a>
-						<a href="./delete_item.php?id=item id" class="btn btn-danger"> Delete Item</a>
+						<a href="./edit_items.php?id=<?php echo $item['id']; ?>" class="btn btn-primary"> Edit Item</a>
+						<a href="./delete_item.php?id=<?php echo $item['id']; ?>" class="btn btn-danger"> Delete Item</a>
 					</div>
 
 				</div>
@@ -40,6 +41,10 @@
 		<?php }; ?>
 		</div> <!-- end of row -->
 	</div><!--  end container -->
+
+<?php }else{
+	header('location: ./error.php');
+} ?>
 
 
 
